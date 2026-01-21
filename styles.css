@@ -1,35 +1,48 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #333;
+/* CONTENEDOR EN GRILLA */
+.grid-buttons {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-h1 {
-  margin-bottom: 0.5rem;
-}
-
-.buttons {
-  margin-top: 2rem;
+/* BOTONES COMO CARTAS CON IMAGEN */
+.card-button {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  align-items: end;
+  justify-content: center;
+  height: 120px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn {
-  display: block;
-  padding: 1rem;
-  background: #d32f2f;
-  color: white;
-  text-decoration: none;
+.card-button span {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 6px;
   border-radius: 6px;
-  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.card-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* IMÁGENES DE FONDO (puedes cambiar las URLs por otras libres) */
+.btn-persona {
+  background-image: url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg');
+  background-color: #1976d2;
+}
+
+.btn-animal {
+  background-image: url('https://images.pexels.com/photos/5938/animal-dog-pet-veterinarian.jpg');
+  background-color: #388e3c;
 }
 
